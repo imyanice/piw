@@ -1,0 +1,25 @@
+{
+  "name": "@yanjobs/piw",
+  "version": "1.0.0",
+  "description": "The smartest cli that allow you to generate project with packages 📦 automatically.The smartest cli that allow you to generate project with packages 📦 automatically.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yan-Jobs/piw.git"
+  },
+  "keywords": [
+    "cli",
+    "generator",
+    "discord",
+    "discord.js"
+  ],
+  "author": "yanjobs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yan-Jobs/piw/issues"
+  },
+  "homepage": "https://github.com/Yan-Jobs/piw#readme"
+}
