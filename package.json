@@ -1,7 +1,7 @@
 {
   "name": "@yanjobs/piw",
   "version": "1.0.0",
-  "description": "The smartest cli that allow you to generate project with packages 📦 automatically.The smartest cli that allow you to generate project with packages 📦 automatically.",
+  "description": "The smartest cli that allow you to generate project with packages 📦 automatically.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Yan-Jobs/piw/issues"
   },
-  "homepage": "https://github.com/Yan-Jobs/piw#readme"
+  "homepage": "https://github.com/Yan-Jobs/piw#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
 }
