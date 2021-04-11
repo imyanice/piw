@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/Yan-Jobs/piw#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "arg": "^5.0.0",
+    "esm": "^3.2.25",
+    "inquirer": "^8.0.0"
   }
 }
