@@ -1,6 +1,6 @@
 import arg from 'arg';
 import inquirer from "inquirer";
-
+import {createProject} from "./main";
 
 function parseArgumentsIntoOptions(rawArgs) {
     const args = arg(
@@ -26,12 +26,21 @@ async function promptForMissingOptions(options) {
     let projectName;
     const defaultName = "your_project";
     const questions = [];
+
+    if (options.skipPrompts) {
+        return {
+            ...options,
+            template: defaultTemplate,
+            projectName: defaultName,
+        }
+    }
+
     if (!options.template) {
         questions.push({
             type: 'list',
             name: 'template',
-            message: "Please choose what do you want to do today",
-            choices: ["Website with HTML,", "A discord Bot with discord.js"],
+            message: "Please choose what do you want to do today, a",
+            choices: ["html", "discord"],
             default: defaultTemplate,
         });
     }
@@ -64,5 +73,5 @@ async function promptForMissingOptions(options) {
 export async function cli(args) {
     let options = parseArgumentsIntoOptions(args);
     options = await promptForMissingOptions(options);
-    console.log(options);
+    await createProject(options);
 }

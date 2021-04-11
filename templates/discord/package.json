@@ -1,0 +1,39 @@
+
+{
+  "name": "discord-bot-template",
+  "version": "1.0.0",
+  "description": "A repo to clone to have a good base bot for your discord bot.",
+  "author": "Yan-Jobs",
+  "contributors": [{
+    "name": "Yan-Jobs",
+    "email": "yan@yanjobs.me"
+  }],
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node index.js"
+  },
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yan-Jobs/discord-bot-template"
+  },
+  "bugs": {
+    "url": "https://github.com/Yan-Jobs/discord-bot-template/issues"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "bot",
+    "template"
+  ],
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "fs": "^0.0.1-security",
+    "dotenv": "^8.2.0"
+
+  },
+  "private": false,
+  "license": "ISC"
+}
