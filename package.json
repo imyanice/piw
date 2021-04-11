@@ -20,6 +20,9 @@
     "discord",
     "discord.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "yanjobs",
   "license": "ISC",
   "bugs": {
