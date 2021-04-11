@@ -1,6 +1,7 @@
 import arg from 'arg';
 import inquirer from "inquirer";
 
+
 function parseArgumentsIntoOptions(rawArgs) {
     const args = arg(
         {
@@ -17,19 +18,13 @@ function parseArgumentsIntoOptions(rawArgs) {
         skipPrompts: args["--yes"] || false,
         git: args["--git"] || false,
         projectName: args._[0],
-        template: args._[1],
     }
 }
 
 async function promptForMissingOptions(options) {
     const defaultTemplate = "Website with HTML,";
+    let projectName;
     const defaultName = "your_project";
-    if (options.projectName) {
-        return {
-            ...options,
-            projectName: options.projectName || defaultName,
-        };
-    }
     const questions = [];
     if (!options.template) {
         questions.push({
@@ -50,11 +45,19 @@ async function promptForMissingOptions(options) {
         });
     }
 
+    if (!options.projectName) {
+        projectName = defaultName
+    } else {
+        projectName = options.projectName
+    }
+
+
     const answers = await inquirer.prompt(questions);
     return {
         ...options,
         template: options.template || answers.template,
         git: options.git || answers.git,
+        projectName: projectName,
     };
 }
 
